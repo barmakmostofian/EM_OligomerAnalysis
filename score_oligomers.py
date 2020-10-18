@@ -13,7 +13,6 @@ if (len(sys.argv) == 6 and (sys.argv[5] == "debug")) :
 else :
  debug = 0
 
-
 FileIn_Picks    = sys.argv[1]
 FileIn_Peaks    = sys.argv[2]
 CDFs_Dir        = sys.argv[3]
