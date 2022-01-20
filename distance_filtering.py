@@ -41,3 +41,15 @@ Possible_Oligomer_Coors_ByLength,
 Locked_Oligomer_Coors_ByLength,
 Excluded_Coors]  =  assign_oligomers(All_Coors, Oligomer_Coors_ByLength, MinDist)
 
+
+np.savez("Assigned_"+DataName+"_ClearanceDistance"+str(MinDist)+"nm.npz",
+np.array(All_Coors),
+np.array(Excluded_Coors),
+np.array(Cleared_Oligomer_Coors_ByLength),
+np.array(Blocked_Oligomer_Coors_ByLength),
+np.array(Possible_Oligomer_Coors_ByLength),
+np.array(Locked_Oligomer_Coors_ByLength),
+np.array(Singleton_Coors),
+np.array(Cleared_Singleton_Coors),
+np.array(UnCleared_Singleton_Coors))
+
