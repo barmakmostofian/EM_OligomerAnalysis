@@ -13,7 +13,7 @@ https://doi.org/10.1101/2020.06.16.154096
 ### 1. Identifying and scoring oligomers from particle-picked micrographs.
 
 Run this code in the following way:<br />
-`python <score_oligomer.py>   <picks_file>  <peaks_file>   <cdfs_dir>  <score_threshold>` <br />
+`python score_oligomer.py   <picks_file>  <peaks_file>   <cdfs_dir>  <score_threshold>` <br />
 where<br /> 
 `<picks_file>` is the file with coordinates of picked particles (DoG picker output file, ‘star’ format)<br />
 `<peaks_file>` is the micrograph image file (DoG picker output file, ‘png’ format)<br />
@@ -29,7 +29,7 @@ The output is a compressed numpy array file (`.npz`) with saved arrays of partic
 Run this code in the following way:<br />
 `python distance_filtering.py   <file_in>  <min_dist>`<br />
 where<br /> 
-`<file_in>`  is the output file from `<score_oligomer.py>`<br />
+`<file_in>`  is the output file from `score_oligomer.py`<br />
 `<min_dist>` is filtering distance for oligomers (in nm).
 
 The output is a compressed numpy array file (`.npz`) with saved arrays of free LC8 and oligomer coordinates, that are identified to be dinstance-filtered or not.
@@ -41,7 +41,7 @@ The output is a compressed numpy array file (`.npz`) with saved arrays of free L
 Run this code in the following way:<br />
 `python statistical_correction.py   <file_in>`<br />
 where<br /> 
-`<file_in>`  is the output file from `<distance_filtering.py>`.
+`<file_in>`  is the output file from `distance_filtering.py`.
 
 
 
